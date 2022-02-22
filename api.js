@@ -17,7 +17,7 @@ return data
 
 
 const  getData=()=>{
-    makeRequest(" https://pokeapi.co/api/v2/pokemon?limit=15&offset=200")
+    makeRequest("https://pokeapi.co/api/v2/pokemon?limit=15&offset=200")
     .then((res)=>
     {     console.log(res.results)
         var values = res.results
