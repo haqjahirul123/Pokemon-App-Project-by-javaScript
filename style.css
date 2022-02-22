@@ -101,11 +101,11 @@ p {
 }
 
 /* color */
-.product-card:first-child h3 {
+.product-card:nth-child h3 {
   color: #e84118;
 }
 
-.product-card:first-child button {
+.product-card:nth-child(odd) button {
   background-color: #e84118;
 }
 
@@ -113,17 +113,11 @@ p {
   color: #fbc531;
 }
 
-.product-card:nth-child(n+1) button {
+.product-card:nth-child(even) button {
   background-color: #fbc531;
 }
 
-.product-card:last-child h3 {
-  color: #0097e6;
-}
 
-.product-card:last-child button {
-  background-color: #0097e6;
-}
 
 /* media queries */
 @media screen and (max-width: 860px) {
