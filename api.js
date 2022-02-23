@@ -1,6 +1,15 @@
 const imgAdd = document.getElementById("container");
-
 var info = " jahir made mistakelll";
+var offset=10
+var offset= parseInt(document.getElementById("btnShow").value)
+console.log(offset)
+document.getElementById("btnShow").addEventListener("click", load)
+
+function load(){
+
+
+
+
 const makeRequest = async (url) => {
   const response = await fetch(url);
 
@@ -15,7 +24,9 @@ const makeRequest = async (url) => {
 };
 
 const getData = () => {
-  makeRequest("https://pokeapi.co/api/v2/pokemon?limit=15&offset=200")
+  //var offset=10
+ 
+  makeRequest(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`)
     .then((res) => {
       console.log(res.results);
       var values = res.results;
@@ -53,8 +64,24 @@ const getData = () => {
       console.log(getInfo);
     })
     .catch((err) => console.log(err));
+
+    
 };
+
 console.log(getData());
+// var aaa= document.getElementById("btnShow").value=""
+// var aaa= document.getElementById("btnShow").value=parseInt(offset+10)
+// console.log(aaa)
+offset = parseInt(offset + 10);
+
+}
+
+
+//var counter = 10;
+
+
+
+//offset=offset+10
 
 // <div>
 //                      <p>${res.forms[0].name}<p/>
