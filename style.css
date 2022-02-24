@@ -16,9 +16,7 @@ body {
   font-size: 1.6em;
   margin: 0;
   min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
 }
 
 h3,
@@ -38,10 +36,12 @@ p {
 
 .container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  padding: 30px 20px;
-  justify-content: space-around;
-  grid-gap: 35px 10px;
+  grid-template-columns: auto auto auto auto auto;
+  padding: 30px 30px;  
+  align-items: center;
+  justify-content: center;
+  grid-gap: 25px 0px;
+  margin-top: 30px;
 }
 
 /* PRODUCT CARD */
@@ -118,6 +118,53 @@ p {
 .product-card:nth-child(even) button {
   background-color: #fbc531;
 }
+
+.showButton{
+    text-align: center;
+  cursor: pointer;
+  font-size:24px;
+  margin: 0 0 0 100px;
+}
+
+.showButton{
+    display: flex;
+    margin-left: 66rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    background-color:#d35400;
+    border: none;
+    padding: 20px;
+    width: 250px;
+    height: 6rem;
+    transition: all 0.5s;
+    
+  }
+  
+  
+  .showButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .showButton span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .showButton:hover span {
+    padding-right: 25px;
+  }
+  
+  .showButton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
 /* media queries */
 @media screen and (max-width: 860px) {
