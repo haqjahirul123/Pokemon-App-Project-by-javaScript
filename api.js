@@ -1,13 +1,13 @@
 const imgAdd = document.getElementById("container");
 var info = " jahir made mistakelll";
-var offset=10
+
 var offset= parseInt(document.getElementById("btnShow").value)
 console.log(offset)
 document.getElementById("btnShow").addEventListener("click", load)
 
 function load(){
 
-
+imgAdd.innerHTML=""
 
 
 const makeRequest = async (url) => {
@@ -77,15 +77,4 @@ offset = parseInt(offset + 10);
 }
 
 
-//var counter = 10;
 
-
-
-//offset=offset+10
-
-// <div>
-//                      <p>${res.forms[0].name}<p/>
-//
-//                     <p>${res.held_items[1].item[0]}<p/>
-
-//                 </div>
