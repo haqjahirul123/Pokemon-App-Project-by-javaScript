@@ -119,22 +119,23 @@ p {
   background-color: #fbc531;
 }
 
+.show{
+  margin-top: 2rem;
+  margin-left: 63rem;
+  justify-content: center;
+  align-items: center;
 
+}
 
 .showButton{
-    display: flex;
-    text-align: center;
     cursor: pointer;
-    font-size:24px;
-    margin: 0 0 0 100px;
-    margin-left: 70rem;
-    margin-top: 2rem;
+    font-size:20px; 
     border-radius: 8px;
-    background-color:#1a242f;
+    background-color:#486280;
     border: none;
-    padding: 15px 30px;
+    padding: 10px 30px;
     width: auto;
-    height: 6rem;
+    height: 4rem;
     transition: all 0.5s;
     
   }
@@ -149,6 +150,7 @@ p {
   
   .showButton span:after {
     content: '»';
+   
     position: absolute;
     opacity: 1;
     top: 0;

@@ -19,10 +19,13 @@
           <img src="./user.png" alt="user" />
         </div>
     </div>
-    <button  value="0" id="btnShow"  class="showButton"><span>Show more</span></button>
-    <div id="container" class="container"> </div>
     
-
+  <div class="show">
+      <button  value="0" id="btnShowMore" onclick="changeOffsetNext()" class="showButton"><span>Show More</span></button>
+       <button  value="0" id="btnShowLess" onclick="changeOffsetPrev()" class="showButton"><span>Show Less</span></button>
+  </div>
+    <div id="container" class="container"> </div>
+  
     <script src="./api.js"></script>
 </body>
 
