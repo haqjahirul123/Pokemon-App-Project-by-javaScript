@@ -77,16 +77,16 @@ const getData = () => {
                         </div>
                             <div class="pokemonInfo">
                              <hr>
-                            Weight: ${res.weight}<br>
-                            Order: ${res.order}<br>
-                            Height: ${res.height}<br>
+                            BaseStat: ${res.stats[0].base_stat}<br>
+                            Effort: ${res.stats[0].effort}<br>
+                            Experience: ${res.base_experience}<br>
                             </div>
 
                             
                         </div>
                         <div class="product-cart">
                             <a href="showDetails.html">
-                            <button onclick="infoTransfer()" >Show Details</button>
+                            <button >Show Details</button>
                             </a>
                         </div>
                     </div> `

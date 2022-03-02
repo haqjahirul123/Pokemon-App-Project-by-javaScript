@@ -23,8 +23,9 @@ main{
 .cover{
     grid-area: cover;
     height: 80vh;
+    background-image: url(./Image/pokemon_PNG107.png);
     background-color:#486280;;
-    background-size: cover;
+    background-size:cover;
     background-position: center center;
 }
 .content{
@@ -71,5 +72,5 @@ main{
 .crt{  
     border-bottom: 1px solid rgb(177,177,177);
     background-color: #486280;
-    height: fit-content;
+    height: 2rem;
 }
