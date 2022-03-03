@@ -189,6 +189,11 @@ p {
     height: 38px;
   }
 
+  .showButton{
+   
+    width: auto;
+    margin-right: 10px;
+  }
 /* media queries */
 @media screen and (max-width: 860px) {
   .container {
@@ -197,11 +202,11 @@ p {
     grid-auto-rows: auto;
   }
 
+ 
+
   .showButton{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-   
+    font-size: smaller;
+    
   }
 
   .product-card {

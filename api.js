@@ -1,6 +1,8 @@
 const imgAdd = document.getElementById("container");
-var info = " jahir made mistakelll";
+const details = document.getElementById("showDetails");
 
+var info = " jahir made mistakelll";
+var a = [];
 var offset= parseInt(document.getElementById("btnShowMore").value)
 //var offset= parseInt(document.getElementById("btnShowLess").value)
 console.log(offset)
@@ -9,6 +11,7 @@ console.log(offset)
 function changeOffsetNext(){
 
 imgAdd.innerHTML=""
+//showDetails.innerHTML=""
 
   offset = offset + 10;
   console.log(offset)
@@ -46,7 +49,7 @@ const makeRequest = async (url) => {
 
 const getData = () => {
   //var offset=10
- 
+  localStorage.clear();
   makeRequest(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`)
     .then((res) => {
       console.log(res.results);
@@ -55,9 +58,14 @@ const getData = () => {
         makeRequest(val.url).then((res) => {
           console.log(res);
           console.log(res.forms[0].name);
-          //console.log(res.held_items[0].item[0].name)
+          a.push(res)
+
+          localStorage.setItem("RES",JSON.stringify(res))
+          console.log(a)  
+
 
           return (imgAdd.innerHTML += ` 
+         
                     <div class="product-card">
                         <div class="product-img img-one">  
                             <img src=${res.sprites.front_shiny} alt="" /> 
@@ -69,17 +77,21 @@ const getData = () => {
                         </div>
                             <div class="pokemonInfo">
                              <hr>
-                            Weight: ${res.weight}<br>
-                            Order: ${res.order}<br>
-                            Height: ${res.height}<br>
+                            BaseStat: ${res.stats[0].base_stat}<br>
+                            Effort: ${res.stats[0].effort}<br>
+                            Experience: ${res.base_experience}<br>
                             </div>
 
                             
                         </div>
                         <div class="product-cart">
-                            <button type="submit">Add to cart</button>
+                            <a href="showDetails.html">
+                            <button >Show Details</button>
+                            </a>
                         </div>
-                    </div> `);
+                    </div> `
+          
+          )
         });
       });
       console.log(getInfo);
@@ -90,9 +102,7 @@ const getData = () => {
 };
 
 console.log(getData());
-// var aaa= document.getElementById("btnShow").value=""
-// var aaa= document.getElementById("btnShow").value=parseInt(offset+10)
-// console.log(aaa)
+
 
 
 
