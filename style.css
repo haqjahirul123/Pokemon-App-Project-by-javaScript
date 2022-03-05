@@ -44,7 +44,7 @@ p {
   margin-top: 30px;
 }
 
-/* PRODUCT CARD */
+/* CARD */
 
 .product-card {
   background-color: #f5f6fa;
@@ -201,8 +201,6 @@ p {
     grid-column-templates: 1fr;
     grid-auto-rows: auto;
   }
-
- 
 
   .showButton{
     font-size: smaller;

@@ -4,15 +4,12 @@ const details = document.getElementById("showDetails");
 var info = " jahir made mistakelll";
 var a = [];
 var offset= parseInt(document.getElementById("btnShowMore").value)
-//var offset= parseInt(document.getElementById("btnShowLess").value)
 console.log(offset)
 
 
 function changeOffsetNext(){
 
-imgAdd.innerHTML=""
-//showDetails.innerHTML=""
-
+  imgAdd.innerHTML=""
   offset = offset + 10;
   console.log(offset)
   getData()
@@ -22,23 +19,19 @@ imgAdd.innerHTML=""
 
 function changeOffsetPrev(){
 
-  imgAdd.innerHTML=""
-  
+    imgAdd.innerHTML=""
     offset = offset-10;
     console.log(offset)
     getData()
     document.getElementById("btnShowLess").innerHTML="Prev"+" "+ `${offset}`+" "+"Pokimons"
    
   
-  }
+}
 
 
 
 const makeRequest = async (url) => {
   const response = await fetch(url);
-
-  //console.log(response)
-  //return response
   if (!response.ok) {
     const message = `Error: ${response.status}`;
     throw new Error(message);
@@ -48,7 +41,6 @@ const makeRequest = async (url) => {
 };
 
 const getData = () => {
-  //var offset=10
   localStorage.clear();
   makeRequest(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=${offset}`)
     .then((res) => {
@@ -57,12 +49,10 @@ const getData = () => {
       const getInfo = values.map((val) => {
         makeRequest(val.url).then((res) => {
           console.log(res);
-          console.log(res.forms[0].name);
+          console.log(res.forms[0].url);
           a.push(res)
-
           localStorage.setItem("RES",JSON.stringify(res))
           console.log(a)  
-
 
           return (imgAdd.innerHTML += ` 
          
@@ -86,7 +76,7 @@ const getData = () => {
                         </div>
                         <div class="product-cart">
                             <a href="showDetails.html">
-                            <button >Show Details</button>
+                            <button ${onclick="abc"}} >Show Details</button>
                             </a>
                         </div>
                     </div> `
@@ -101,7 +91,7 @@ const getData = () => {
     
 };
 
-console.log(getData());
+getData();
 
 
 

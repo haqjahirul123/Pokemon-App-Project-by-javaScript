@@ -22,23 +22,15 @@ const showDetails=()=>{
     
      console.log(details)
        details.abilities.map((detail)=>{
-
-        console.log(detail)
-
-         show1.innerHTML+=`<div>
+        // console.log(detail)
+        show1.innerHTML+=`<div>
                             <div>
                                 Name: ${detail.ability.name}<br>
                                 Slot Number: ${detail.slot}<hr>
                             </div>
                                 
                         </div>`
-     })
-     
-   
-            
-            
-            
-          
+        })         
 }
 
 showDetails()
