@@ -16,7 +16,6 @@ body {
   font-size: 1.6em;
   margin: 0;
   min-height: 100vh;
-
 }
 
 h3,
@@ -37,7 +36,7 @@ p {
 .container {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
-  padding: 30px 30px;  
+  padding: 30px 30px;
   align-items: center;
   justify-content: center;
   grid-gap: 25px 0px;
@@ -66,13 +65,7 @@ p {
 
 .product-img {
   border-radius: 10px 10px 0 0;
-  height: 150px;
-  max-width: 100%;
-}
-
-.img-one {
-  background-size: cover;
-  background-position: center;
+  text-align: center;
 }
 
 .product-text {
@@ -119,81 +112,191 @@ p {
   background-color: #fbc531;
 }
 
-.show{
+.show {
   margin-top: 2rem;
   margin-left: 63rem;
   justify-content: center;
   align-items: center;
-
 }
 
-.showButton{
-    cursor: pointer;
-    font-size:20px; 
-    border-radius: 8px;
-    background-color:#486280;
-    border: none;
-    padding: 10px 30px;
-    width: auto;
-    height: 4rem;
-    transition: all 0.5s;
-    
-  }
-  
-  
-  .showButton span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .showButton span:after {
-    content: '»';
-   
-    position: absolute;
-    opacity: 1;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .showButton:hover span {
-    padding-right: 25px;
-  }
-  
-  .showButton:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.showButton {
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: #486280;
+  border: none;
+  padding: 10px 30px;
+  width: auto;
+  height: 4rem;
+  transition: all 0.5s;
+}
+
+.showButton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.showButton span:after {
+  content: "»";
+
+  position: absolute;
+  opacity: 1;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.showButton:hover span {
+  padding-right: 25px;
+}
+
+.showButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 /* header */
-  .header {
-    background-color: #1a242f;
-    height: 92px;
-    padding: 0px 40px;
-    display: flex;
-    align-items: center;
-    justify-content:space-between
-  }
-  
-  .logo {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 600;
-  }
-  
-  .user-image,
-  .user-image img {
-    width: 38px;
-    height: 38px;
-  }
+.header {
+  background-color: #1a242f;
+  height: 92px;
+  padding: 0px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .showButton{
-   
-    width: auto;
-    margin-right: 10px;
-  }
+.logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.user-image,
+.user-image img {
+  width: 38px;
+  height: 38px;
+}
+
+.showButton {
+  width: auto;
+  margin-right: 10px;
+}
+
+.rmbutton {
+  cursor: pointer;
+}
+
+/* Modal CSS*/
+
+.modal {
+  --gap: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: var(--gap);
+  background: rgba(0, 0, 0, 0.5);
+  font-family: sans-serif;
+  overflow: auto;
+}
+
+.modal__inner {
+  background: #2f3640;
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+.modal__top {
+  display: flex;
+  align-items: center;
+  background-color: #1a242f;
+  color: rgba(255, 255, 255, 0.925);
+  margin-bottom: 40px;
+}
+
+.modal__title {
+  flex-grow: 1;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 60px;
+}
+
+.modal__close {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: var(--gap);
+  border: none;
+  outline: none;
+}
+
+.modal__content {
+  display: flex;
+  justify-content: center;
+}
+.modal__bottom {
+  text-align: center;
+  padding: 0 var(--gap) var(--gap) var(--gap);
+  margin-top: 40px;
+}
+
+.modal__button {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #009578;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.modal__button:not(:last-child) {
+  margin-right: 5px;
+}
+
+.modal__button:hover {
+  background: #008578;
+}
+
+/* Card in Modal */
+
+.product-name-modal {
+  font-weight: bold;
+  font-size: 22px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.pokemonInfo-modal {
+  padding-top: 20px 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.product-card-modal {
+  width: 350px;
+  background: #2f3640;
+}
+.test1 {
+  border: solid #e3be50 10px;
+  background-image: linear-gradient(red, yellow);
+}
+
+.img-one-modal img {
+  width: 180px;
+}
 /* media queries */
 @media screen and (max-width: 860px) {
   .container {
@@ -202,9 +305,31 @@ p {
     grid-auto-rows: auto;
   }
 
+  .showButton {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .product-card {
+    margin: 1.5em;
+  }
+}
+
+/* media queries */
+@media screen and (max-width: 860px) {
+  .container {
+    display: grid;
+    grid-column-templates: 1fr;
+    grid-auto-rows: auto;
+  }
+
+<<<<<<< HEAD
   .showButton{
+=======
+  .showButton {
+>>>>>>> master
     font-size: smaller;
-    
   }
 
   .product-card {
